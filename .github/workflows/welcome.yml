@@ -2,6 +2,7 @@ name: Post welcome comment
 on:
   pull_request:
     types: [opened]
+  # workflow_dispatch:
 permissions:
   pull-requests: write
 jobs:
@@ -19,3 +20,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is an nother job"
+      
