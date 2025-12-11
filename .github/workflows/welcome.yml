@@ -14,10 +14,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
-  job2:
-    name: sample additional job
-    needs: welcome
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "This is an nother job"
       
