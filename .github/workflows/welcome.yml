@@ -16,8 +16,14 @@ jobs:
           PR_URL: ${{ github.event.pull_request.html_url }}
   job2:
     name: sample additional job
-    # needs: welcome
+    needs: welcome
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is an nother job"
+  job3:
+    name: new additional job
+    needs: welcome
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is job3"
       
